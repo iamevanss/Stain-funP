@@ -1,14 +1,9 @@
-import 'dotenv/config'
-import { initStore, listUsers } from './lib/store.js'
-import { createSession } from './lib/whatsapp.js'
-import './lib/telegram.js'
+import { existsSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
 
-await initStore()
-
-for (const user of await listUsers()) {
-  if (!user.paired) continue
-  try { await createSession(user.telegramId) }
-  catch (error) { console.error(`[startup ${user.telegramId}]`, error.message) }
+if (!existsSync('./node_modules/@whiskeysockets/baileys')) {
+  console.log('[startup] Installing dependencies...')
+  execFileSync('npm', ['install', '--omit=dev'], { stdio: 'inherit' })
 }
 
-console.log('View Once started.')
+await import('./app.js')
