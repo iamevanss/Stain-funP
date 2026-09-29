@@ -1,0 +1,17 @@
+{
+  "name": "view-once-bot",
+  "version": "1.0.0",
+  "description": "Minimal multi-session WhatsApp View Once bot with Telegram pairing and local storage.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm install --omit=dev && node index.js",
+    "panel": "npm install --omit=dev && node index.js"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "7.0.0-rc11",
+    "node-telegram-bot-api": "^0.66.0",
+    "pino": "^9.4.0",
+    "dotenv": "^16.4.5"
+  }
+}
