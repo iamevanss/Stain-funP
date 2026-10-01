@@ -1,17 +1,21 @@
 {
-  "name": "view-once-bot",
-  "version": "1.0.0",
-  "description": "Minimal multi-session WhatsApp View Once bot with Telegram pairing and local storage.",
+  "name": "stain-fun-bot",
+  "version": "2.0.0",
+  "description": "ティ Stain Fun Bot - multi-session WhatsApp bot with Telegram pairing and local storage.",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "npm install --omit=dev && node index.js",
-    "panel": "npm install --omit=dev && node index.js"
+    "start": "node index.js",
+    "panel": "node index.js"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "7.0.0-rc11",
+    "dotenv": "^16.4.5",
+    "jimp": "^1.6.1",
     "node-telegram-bot-api": "^0.66.0",
-    "pino": "^9.4.0",
-    "dotenv": "^16.4.5"
+    "pino": "^9.4.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
