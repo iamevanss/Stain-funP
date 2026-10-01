@@ -1,7 +1,7 @@
 {
   "name": "stain-fun-bot",
   "version": "2.0.0",
-  "description": "ティ Stain Fun Bot - multi-session WhatsApp bot with Telegram pairing and local storage.",
+  "description": "ටි Stain Fun Bot - multi-session WhatsApp bot with Telegram pairing and local storage.",
   "type": "module",
   "main": "index.js",
   "scripts": {
