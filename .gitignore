@@ -1,8 +1,4 @@
 node_modules/
 .env
 *.log
-data/users.json
-data/sessions/*/creds.json
-data/sessions/*/*.json
-data/sessions/*/*.json.bak
-data/sessions/*/*.lock
+data/
