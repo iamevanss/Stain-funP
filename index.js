@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url'
 const root = path.dirname(fileURLToPath(import.meta.url))
 process.chdir(root)
 
-const required = ['@whiskeysockets/baileys', 'node-telegram-bot-api', 'pino', 'dotenv']
+const required = ['@whiskeysockets/baileys', 'node-telegram-bot-api', 'pino', 'dotenv', 'wa-sticker-formatter']
 const missing = required.some(name => !existsSync(path.join(root, 'node_modules', ...name.split('/'))))
 
 if (missing) {
