@@ -14,7 +14,8 @@
     "jimp": "^1.6.1",
     "node-telegram-bot-api": "^0.66.0",
     "pino": "^9.4.0",
-    "wa-sticker-formatter": "^4.4.4"
+    "wa-sticker-formatter": "^4.4.4",
+    "youtube-dl-exec": "^3.1.17"
   },
   "engines": {
     "node": ">=20.0.0"
