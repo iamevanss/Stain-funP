@@ -2,6 +2,7 @@ import './lib/env.js'
 import { initStore, listUsers } from './lib/store.js'
 import { createSession } from './lib/whatsapp.js'
 import { brand } from './lib/style.js'
+import { listTelegramAccountIds, restoreTelegramAccount } from './lib/telegram-user.js'
 import './lib/telegram.js'
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -23,4 +24,9 @@ for (const user of await listUsers()) {
   }
 }
 
-console.log(`${brand} started. Restored ${restored} session(s).`)
+let telegramRestored = 0
+for (const id of await listTelegramAccountIds()) {
+  if (await restoreTelegramAccount(id)) telegramRestored++
+}
+
+console.log(`${brand} started. Restored ${restored} WhatsApp session(s) and ${telegramRestored} Telegram account(s).`)
