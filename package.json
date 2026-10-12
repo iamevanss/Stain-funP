@@ -16,7 +16,7 @@
     "pino": "^9.4.0",
     "wa-sticker-formatter": "^4.4.4",
     "youtube-dl-exec": "^3.1.17",
-    "teleproto": "latest"
+    "telegram": "^2.26.22"
   },
   "engines": {
     "node": ">=20.0.0"
